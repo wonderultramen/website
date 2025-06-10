@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang Kami - Wonder Ultramen</title>
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #fdfdfd;
-      padding: 30px;
+      padding: 20px;
+      text-align: center;
     }
 
-    h2 {
+    h1, h2, h3 {
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 1rem auto;
+      line-height: 1.6;
       color: #444;
-      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    .image.main img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 1.5rem auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     table {
       width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
       border-collapse: collapse;
       border-radius: 8px;
       overflow: hidden;
@@ -25,7 +53,6 @@
       background-color: #6c5ce7;
       color: white;
       padding: 12px;
-      text-align: left;
       font-size: 16px;
     }
 
@@ -40,50 +67,46 @@
     }
 
     tr:hover td {
-      background-color: #dfe6e9 !important;
+      background-color: #dfe6e9;
     }
 
-    /* Warna-warni per blok 5 baris */
     tr.color-1 td { background-color: #ffeaa7; }
     tr.color-2 td { background-color: #fab1a0; }
     tr.color-3 td { background-color: #81ecec; }
     tr.color-4 td { background-color: #a29bfe; }
     tr.color-5 td { background-color: #55efc4; }
+
+    .cta-button {
+      margin-top: 2rem;
+    }
   </style>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tentang Kami - Wonder Ultramen</title>
-  <link rel="icon" href="assets/images/logo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
   <img src="assets/images/logo.png" alt="Logo Wonder Ultramen" class="logo">
   <h1>Tentang Kami</h1>
-  <div class="container">
-    <p>
-      Komunitas <strong>Wonder Ultramen Mahasiswa</strong> adalah wadah yang menggabungkan semangat kebersamaan, semangat belajar, dan kegiatan seru bagi para mahasiswa dari berbagai daerah. 
-    </p>
-    <p>
-      Kami hadir sebagai tempat untuk berbagi ilmu, pengalaman, dan membangun relasi positif melalui berbagai aktivitas mulai dari diskusi, coding bersama, liburan bareng, hingga event komunitas yang menarik.
-    </p>
-    <p>
-      Bergabunglah dan jadi bagian dari komunitas yang mendukung pertumbuhan, kreativitas, dan kolaborasi antarmahasiswa!
-    </p>
+
+  <p>
+    Komunitas <strong>Wonder Ultramen Mahasiswa</strong> adalah wadah yang menggabungkan semangat kebersamaan, semangat belajar, dan kegiatan seru bagi para mahasiswa dari berbagai daerah.
+  </p>
+  <p>
+    Kami hadir sebagai tempat untuk berbagi ilmu, pengalaman, dan membangun relasi positif melalui berbagai aktivitas mulai dari diskusi, coding bersama, liburan bareng, hingga event komunitas yang menarik.
+  </p>
+  <p>
+    Bergabunglah dan jadi bagian dari komunitas yang mendukung pertumbuhan, kreativitas, dan kolaborasi antarmahasiswa!
+  </p>
+
+  <h2><u>ADMIN WONDER ULTRAMEN</u></h2>
+  <h3>Citra Mukti (Jakarta)</h3>
+  <h3>Gava Joko Pratama (Semarang)</h3>
+  <h3>Malihatun Nisa (Lampung)</h3>
+  <h3>Raihan Faiz M (Solo)</h3>
+
+  <div class="image main">
+    <img src="assets/images/admin.jpg" alt="Admin Wonder Ultramen" />
   </div>
-<!-- Post -->
-							<section class="post">
-								<header class="major">
-									
-									<h1><u>ADMIN<br/></u>
-									<u>WONDER ULTRAMEN</h1></u>
-									<h3>Citra Mukti (Jakarta)</h3>
-									<h3> Gava Joko Pratama (Semarang)</h3>
-									<h3> Malihatun Nisa (Lampung)</h3>
-									<h3> Raihan Faiz M (Solo)</h3>
-								</header>
-								<div class="image main"><img src="assets/images/admin.jpg" alt="" /></div>
-<h2>Daftar Anggota Wonder Ultramen</h2>
+
+  <h2>Daftar Anggota Wonder Ultramen</h2>
 
   <table>
     <thead>
@@ -94,45 +117,40 @@
       </tr>
     </thead>
     <tbody>
-            <tr class="color-1"><td>1</td><td>Fauzan Nur H</td><td>22339865006</td></tr>
+      <tr class="color-1"><td>1</td><td>Fauzan Nur H</td><td>22339865006</td></tr>
       <tr class="color-2"><td>2</td><td>M. Miftahussurur</td><td>22339865007</td></tr>
       <tr class="color-3"><td>3</td><td>M. Abdul Aziz S.Pd</td><td>22339865008</td></tr>
       <tr class="color-4"><td>4</td><td>Beplani</td><td>22339865011</td></tr>
       <tr class="color-5"><td>5</td><td>Aulia Qurrotul A</td><td>22339865014</td></tr>
-
       <tr class="color-1"><td>6</td><td>Didi Handayani</td><td>22339865015</td></tr>
-      <tr class="color-2"><td>7</td><td>Purnama Anugrah </td><td>22339865021</td></tr>
+      <tr class="color-2"><td>7</td><td>Purnama Anugrah</td><td>22339865021</td></tr>
       <tr class="color-3"><td>8</td><td>Nazarudin Ilyas</td><td>22339865022</td></tr>
       <tr class="color-4"><td>9</td><td>Rizky</td><td>22339865023</td></tr>
       <tr class="color-5"><td>10</td><td>Jacky vallare</td><td>22339865024</td></tr>
-
       <tr class="color-1"><td>11</td><td>M. Ariyanto</td><td>22339865025</td></tr>
       <tr class="color-2"><td>12</td><td>Maya Amelia Putri</td><td>22339865027</td></tr>
       <tr class="color-3"><td>13</td><td>Ilham Dzilkirom M A</td><td>22339865028</td></tr>
       <tr class="color-4"><td>14</td><td>Memoris Dakhi</td><td>22339865029</td></tr>
       <tr class="color-5"><td>15</td><td>R. Sultan N. S. W</td><td>22339865030</td></tr>
-
       <tr class="color-1"><td>16</td><td>Ali Akbar Rahmat</td><td>22339865031</td></tr>
       <tr class="color-2"><td>17</td><td>Fauzan Nur Hidayat</td><td>22339865032</td></tr>
       <tr class="color-3"><td>18</td><td>Tyas Maulana Pratama</td><td>22339865033</td></tr>
       <tr class="color-4"><td>19</td><td>Wawah Sri Sunenti</td><td>22339865034</td></tr>
       <tr class="color-5"><td>20</td><td>Rangga Surya Pratama</td><td>22339865035</td></tr>
-
       <tr class="color-1"><td>21</td><td>DIKI</td><td>22339865036</td></tr>
       <tr class="color-2"><td>22</td><td>Arung Muh Bilal Alwi</td><td>22339865037</td></tr>
       <tr class="color-3"><td>23</td><td>KHOIRUN ZAIDAN MUCHTAR</td><td>22339865038</td></tr>
       <tr class="color-4"><td>24</td><td>Anggraita Ali Waskito</td><td>22339865039</td></tr>
       <tr class="color-5"><td>25</td><td>Faysa Maharani</td><td>22339865040</td></tr>
-
       <tr class="color-1"><td>26</td><td>Nuril Muslimin</td><td>22339865041</td></tr>
       <tr class="color-2"><td>27</td><td>Dany Pratama S</td><td>22339865042</td></tr>
       <tr class="color-3"><td>28</td><td>-</td><td>-</td></tr>
       <tr class="color-4"><td>29</td><td>-</td><td>-</td></tr>
       <tr class="color-5"><td>30</td><td>-</td><td>-</td></tr>
-</p>
-</section>
-</table>
+    </tbody>
+  </table>
 
   <a href="index.html"><button class="cta-button">Kembali ke Beranda</button></a>
+
 </body>
 </html>
