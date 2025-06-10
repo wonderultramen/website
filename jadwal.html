@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Kegiatan - Wonder Ultramen</title>
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .schedule-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 2rem;
+    }
+    .event-box {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 16px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+    .event-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .event-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .event-status {
+      font-style: italic;
+      margin: 0.5rem 0;
+    }
+    .showtimes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 0.5rem;
+    }
+    .showtime {
+      background: #fff;
+      color: #2b1055;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <img src="assets/images/logo.png" alt="Logo Wonder Ultramen" class="logo">
+  <h1>Jadwal Kegiatan</h1>
+  <div class="container">
+    <p>Berikut adalah jadwal kegiatan komunitas Wonder Ultramen Mahasiswa tahun 2025:</p>
+
+    <div class="schedule-grid">
+      <div class="event-box">
+        <img src="assets/images/sidomukti.png" alt="Sidomukti" class="event-img">
+        <div class="event-title">SIDOMUKTI: 19 - 20 APRIL 2025</div>
+        <div class="event-status">Terlaksana</div>
+        <div class="showtimes">
+          <div class="showtime">14:00</div>
+          <div class="showtime">23:00</div>
+          <div class="showtime">06:00</div>
+          <div class="showtime">11:00</div>
+        </div>
+      </div>
+
+      <div class="event-box">
+        <img src="assets/images/merbabu.png" alt="Merbabu" class="event-img">
+        <div class="event-title">MERBABU: AGUSTUS</div>
+        <div class="event-status">Segera</div>
+        <div class="showtimes">
+          <div class="showtime">14:00</div>
+          <div class="showtime">23:00</div>
+          <div class="showtime">06:00</div>
+          <div class="showtime">11:00</div>
+        </div>
+      </div>
+
+      <div class="event-box">
+        <img src="assets/images/comingsoon.png" alt="Coming Soon" class="event-img">
+        <div class="event-title">COMING SOON: DESEMBER</div>
+        <div class="event-status">Segera</div>
+        <div class="showtimes">
+          <div class="showtime">14:00</div>
+          <div class="showtime">23:00</div>
+          <div class="showtime">06:00</div>
+          <div class="showtime">11:00</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="index.html"><button class="cta-button">Kembali ke Beranda</button></a>
+</body>
+</html>
