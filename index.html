@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<style>
-  .centered-img {
-    display: block;
-    margin: 2rem auto;
-    max-width: 90%;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  }
-</style>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wonder Ultramen Mahasiswa Community</title>
-  <link rel="icon" href="assets/images/logo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      padding: 2rem;
+      background: linear-gradient(-45deg, #6a11cb, #2575fc, #00c9ff, #92fe9d);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
+
+    h1, h3 {
+      margin: 0.5rem 0;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 2rem auto;
+      padding: 0 10px;
+    }
+
+    .cta-button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      white-space: nowrap;
+      min-width: 120px;
+    }
+
+    .cta-button:hover {
+      opacity: 0.9;
+    }
+
+    .centered-img {
+      display: block;
+      margin: 2rem auto;
+      max-width: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 <body>
-  <img src="assets/images/logo.png" alt="Logo Wonder Ultramen" class="logo">
+
+  <img src="assets/images/logo.png" alt="Logo Wonder Ultramen" class="logo" />
   <h1>Wonder Ultramen</h1>
   <h3>Mahasiswa Community</h3>
 
@@ -29,11 +82,8 @@
     <a href="berita.html"><button class="cta-button">Berita</button></a>
     <a href="jadwal.html"><button class="cta-button">Jadwal</button></a>
   </div>
-								<header class="major">
-									
-								</header>
-								<a href="#" class="image main"><img src="assets/images/pic01.jpg" alt="Kegiatan" class="centered-img" />
-</a>
-								
+
+  <img src="assets/images/pic01.jpg" alt="Kegiatan" class="centered-img" />
+
 </body>
 </html>
