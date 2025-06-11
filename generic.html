@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,7 +6,6 @@
   <title>Tentang Kami - Wonder Ultramen</title>
   <link rel="icon" href="assets/images/logo.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
   <style>
     * {
       box-sizing: border-box;
@@ -40,8 +38,8 @@
     }
 
     .wrapper {
-      max-width: 960px;
-      margin: 0 auto;
+      max-width: 100%;
+      width: 100%;
       padding: 2rem 1rem;
       display: flex;
       flex-direction: column;
@@ -50,7 +48,8 @@
 
     .logo {
       width: 100px;
-      margin-bottom: 20px;
+      margin: 0 auto 20px auto;
+      display: block;
     }
 
     h1, h2, h3 {
@@ -59,22 +58,28 @@
     }
 
     p {
-      max-width: 700px;
+      max-width: 100%;
+      width: 100%;
       margin: 1rem auto;
+      padding: 0 1rem;
       line-height: 1.6;
       color: #f0f0f0;
+      text-align: center;
     }
 
     .image.main img {
+      display: block;
       max-width: 100%;
-      border-radius: 12px;
+      width: 100%;
+      height: auto;
       margin: 1.5rem auto;
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
     table {
       width: 100%;
-      max-width: 800px;
+      max-width: 100%;
       margin: 2rem auto;
       border-collapse: collapse;
       border-radius: 8px;
@@ -128,7 +133,7 @@
 
     @media (max-width: 768px) {
       .wrapper {
-        padding: 1rem 0.5rem;
+        padding: 1rem;
       }
 
       h1, h2, h3 {
@@ -182,7 +187,7 @@
     <h2>Daftar Anggota Wonder Ultramen</h2>
 
     <table>
-      <thead>
+       <thead>
         <tr><th>No</th><th>Nama</th><th>Nomor Anggota</th></tr>
       </thead>
       <tbody>
