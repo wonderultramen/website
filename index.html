@@ -9,19 +9,28 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
     body {
-      text-align: center;
+      margin: 0;
       font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      color: white;
+      text-align: center;
       padding: 2rem;
       background: linear-gradient(-45deg, #6a11cb, #2575fc, #00c9ff, #92fe9d);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
-      color: white;
     }
 
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
 
     .logo {
@@ -62,6 +71,9 @@
 </head>
 <body>
 
+  <!-- Canvas untuk bintang -->
+  <canvas id="starCanvas"></canvas>
+
   <img src="assets/images/logo.png" alt="Logo Wonder Ultramen" class="logo" />
   <h1>Wonder Ultramen</h1>
   <h3>Mahasiswa Community</h3>
@@ -73,6 +85,48 @@
     <a href="berita.html"><button class="cta-button">Berita</button></a>
     <a href="jadwal.html"><button class="cta-button">Jadwal</button></a>
   </div>
+
+  <!-- Script animasi bintang -->
+  <script>
+    const canvas = document.getElementById('starCanvas');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    for (let i = 0; i < 100; i++) {
+      stars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 1.5,
+        speed: Math.random() * 0.5 + 0.2
+      });
+    }
+
+    function animateStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'white';
+      for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+        ctx.fill();
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(animateStars);
+    }
+
+    animateStars();
+  </script>
 
 </body>
 </html>
