@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -19,7 +20,6 @@
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
       color: white;
-      padding: 20px;
       text-align: center;
       overflow-x: hidden;
     }
@@ -37,6 +37,15 @@
       width: 100%;
       height: 100%;
       z-index: -1;
+    }
+
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .logo {
@@ -116,95 +125,68 @@
     .cta-button:hover {
       opacity: 0.9;
     }
-  
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
 
-  .container {
-    padding: 0.5rem;
-  }
+    @media (max-width: 768px) {
+      .wrapper {
+        padding: 1rem 0.5rem;
+      }
 
-  h1, h2, h3 {
-    font-size: 1.5rem;
-  }
+      h1, h2, h3 {
+        font-size: 1.4rem;
+      }
 
-  .cta-button {
-    width: 100%;
-    font-size: 1rem;
-  }
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
 
-  .gallery-container,
-  .schedule-grid {
-    flex-direction: column;
-    align-items: center;
-  }
+      table th, table td {
+        font-size: 14px;
+        padding: 8px;
+      }
 
-  iframe {
-    height: 600px;
-  }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
 
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  table th, table td {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-</style>
+      .cta-button {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Canvas untuk bintang -->
   <canvas id="starCanvas"></canvas>
 
-  <img src="assets/images/logo.png" alt="Logo Wonder Ultramen" class="logo">
-  <h1>Tentang Kami</h1>
+  <div class="wrapper">
+    <img src="assets/images/logo.png" alt="Logo Wonder Ultramen" class="logo">
+    <h1>Tentang Kami</h1>
 
-  <p>
-    Komunitas <strong>Wonder Ultramen Mahasiswa</strong> adalah wadah yang menggabungkan semangat kebersamaan, semangat belajar, dan kegiatan seru bagi para mahasiswa dari berbagai daerah.
-  </p>
-  <p>
-    Kami hadir sebagai tempat untuk berbagi ilmu, pengalaman, dan membangun relasi positif melalui berbagai aktivitas mulai dari diskusi, coding bersama, liburan bareng, hingga event komunitas yang menarik.
-  </p>
-  <p>
-    Bergabunglah dan jadi bagian dari komunitas yang mendukung pertumbuhan, kreativitas, dan kolaborasi antarmahasiswa!
-  </p>
+    <p>Komunitas <strong>Wonder Ultramen Mahasiswa</strong> adalah wadah yang menggabungkan semangat kebersamaan, semangat belajar, dan kegiatan seru bagi para mahasiswa dari berbagai daerah.</p>
+    <p>Kami hadir sebagai tempat untuk berbagi ilmu, pengalaman, dan membangun relasi positif melalui berbagai aktivitas mulai dari diskusi, coding bersama, liburan bareng, hingga event komunitas yang menarik.</p>
+    <p>Bergabunglah dan jadi bagian dari komunitas yang mendukung pertumbuhan, kreativitas, dan kolaborasi antarmahasiswa!</p>
 
-  <h2><u>ADMIN WONDER ULTRAMEN</u></h2>
-  <h3>Citra Mukti (Jakarta)</h3>
-  <h3>Gava Joko Pratama (Semarang)</h3>
-  <h3>Malihatun Nisa (Lampung)</h3>
-  <h3>Raihan Faiz M (Solo)</h3>
+    <h2><u>ADMIN WONDER ULTRAMEN</u></h2>
+    <h3>Citra Mukti (Jakarta)</h3>
+    <h3>Gava Joko Pratama (Semarang)</h3>
+    <h3>Malihatun Nisa (Lampung)</h3>
+    <h3>Raihan Faiz M (Solo)</h3>
 
-  <div class="image main">
-    <img src="assets/images/admin.jpg" alt="Admin Wonder Ultramen" />
-  </div>
+    <div class="image main">
+      <img src="assets/images/admin.jpg" alt="Admin Wonder Ultramen" />
+    </div>
 
-  <h2>Daftar Anggota Wonder Ultramen</h2>
+    <h2>Daftar Anggota Wonder Ultramen</h2>
 
-  <!-- Table tetap sama -->
-  <table>
-    <thead>
-      <tr>
-        <th>No</th>
-        <th>Nama</th>
-        <th>Nomor Anggota</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="color-1"><td>1</td><td>Fauzan Nur H</td><td>22339865006</td></tr>
+    <table>
+      <thead>
+        <tr><th>No</th><th>Nama</th><th>Nomor Anggota</th></tr>
+      </thead>
+      <tbody>
+        <tr class="color-1"><td>1</td><td>Fauzan Nur H</td><td>22339865006</td></tr>
       <tr class="color-2"><td>2</td><td>M. Miftahussurur</td><td>22339865007</td></tr>
       <tr class="color-3"><td>3</td><td>M. Abdul Aziz S.Pd</td><td>22339865008</td></tr>
       <tr class="color-4"><td>4</td><td>Beplani</td><td>22339865011</td></tr>
@@ -234,25 +216,22 @@
       <tr class="color-3"><td>28</td><td>-</td><td>-</td></tr>
       <tr class="color-4"><td>29</td><td>-</td><td>-</td></tr>
       <tr class="color-5"><td>30</td><td>-</td><td>-</td></tr>
-    </tbody>
-  </table>
+      </tbody>
+    </table>
 
-  <a href="index.html"><button class="cta-button">Kembali ke Beranda</button></a>
+    <a href="index.html"><button class="cta-button">Kembali ke Beranda</button></a>
+  </div>
 
-  <!-- Script animasi bintang -->
   <script>
     const canvas = document.getElementById('starCanvas');
     const ctx = canvas.getContext('2d');
     let stars = [];
-
     function resizeCanvas() {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
-
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
-
     for (let i = 0; i < 100; i++) {
       stars.push({
         x: Math.random() * canvas.width,
@@ -261,7 +240,6 @@
         speed: Math.random() * 0.5 + 0.2
       });
     }
-
     function animateStars() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = 'white';
@@ -277,7 +255,6 @@
       }
       requestAnimationFrame(animateStars);
     }
-
     animateStars();
   </script>
 

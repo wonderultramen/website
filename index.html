@@ -11,13 +11,21 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      overflow: hidden;
+      overflow-x: hidden;
       color: white;
       text-align: center;
-      padding: 2rem;
       background: linear-gradient(-45deg, #6a11cb, #2575fc, #00c9ff, #92fe9d);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
+    }
+
+    .wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
     }
 
     @keyframes gradientBG {
@@ -67,72 +75,45 @@
     .cta-button:hover {
       opacity: 0.9;
     }
-  
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
 
-  .container {
-    padding: 0.5rem;
-  }
+    @media (max-width: 768px) {
+      .wrapper {
+        padding: 1rem;
+      }
 
-  h1, h2, h3 {
-    font-size: 1.5rem;
-  }
+      h1, h2, h3 {
+        font-size: 1.5rem;
+      }
 
-  .cta-button {
-    width: 100%;
-    font-size: 1rem;
-  }
+      .cta-button {
+        font-size: 1rem;
+      }
 
-  .gallery-container,
-  .schedule-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  iframe {
-    height: 600px;
-  }
-
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  table th, table td {
-    font-size: 14px;
-    padding: 8px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-</style>
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Canvas untuk bintang -->
   <canvas id="starCanvas"></canvas>
 
-  <img src="assets/images/logo.png" alt="Logo Wonder Ultramen" class="logo" />
-  <h1>Wonder Ultramen</h1>
-  <h3>Mahasiswa Community</h3>
+  <div class="wrapper">
+    <img src="assets/images/logo.png" alt="Logo Wonder Ultramen" class="logo" />
+    <h1>Wonder Ultramen</h1>
+    <h3>Mahasiswa Community</h3>
 
-  <div class="buttons">
-    <a href="generic.html"><button class="cta-button">Tentang Kami</button></a>
-    <a href="gallery.html"><button class="cta-button">Kegiatan</button></a>
-    <a href="elements.html"><button class="cta-button">Pendaftaran</button></a>
-    <a href="berita.html"><button class="cta-button">Berita</button></a>
-    <a href="jadwal.html"><button class="cta-button">Jadwal</button></a>
+    <div class="buttons">
+      <a href="generic.html"><button class="cta-button">Tentang Kami</button></a>
+      <a href="gallery.html"><button class="cta-button">Kegiatan</button></a>
+      <a href="elements.html"><button class="cta-button">Pendaftaran</button></a>
+      <a href="berita.html"><button class="cta-button">Berita</button></a>
+      <a href="jadwal.html"><button class="cta-button">Jadwal</button></a>
+    </div>
   </div>
 
-  <!-- Script animasi bintang -->
   <script>
     const canvas = document.getElementById('starCanvas');
     const ctx = canvas.getContext('2d');
