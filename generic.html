@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,6 +8,55 @@
   <link rel="icon" href="assets/images/logo.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+  #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.preloader-content {
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.preloader-logo {
+  width: 100px;
+  height: 100px;
+  animation: rotateGlow 2s linear infinite;
+}
+
+.loading-text {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #00f2ff;
+  text-shadow: 0 0 5px #00f2ff, 0 0 10px #00f2ff, 0 0 15px #00f2ff;
+  font-weight: bold;
+  animation: pulseText 1.5s infinite ease-in-out;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); filter: drop-shadow(0 0 5px #00f2ff); }
+  100% { transform: rotate(360deg); filter: drop-shadow(0 0 20px #00f2ff); }
+}
+
+@keyframes pulseText {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
     * {
       box-sizing: border-box;
     }
@@ -163,6 +213,12 @@
   </style>
 </head>
 <body>
+<div id="preloader">
+  <div class="preloader-content">
+    <img src="assets/images/logo.png" alt="Loading..." class="preloader-logo" />
+    <p class="loading-text">Loading...</p>
+  </div>
+</div>
 
   <canvas id="starCanvas"></canvas>
 
@@ -179,6 +235,7 @@
     <h3>Gava Joko Pratama (Semarang)</h3>
     <h3>Malihatun Nisa (Lampung)</h3>
     <h3>Raihan Faiz M (Solo)</h3>
+	<h3>M Zidni Syukron (Demak)</h3>
 
     <div class="image main">
       <img src="assets/images/admin.jpg" alt="Admin Wonder Ultramen" />
@@ -218,13 +275,18 @@
       <tr class="color-5"><td>25</td><td>Faysa Maharani</td><td>22339865040</td></tr>
       <tr class="color-1"><td>26</td><td>Nuril Muslimin</td><td>22339865041</td></tr>
       <tr class="color-2"><td>27</td><td>Dany Pratama S</td><td>22339865042</td></tr>
-      <tr class="color-3"><td>28</td><td>-</td><td>-</td></tr>
-      <tr class="color-4"><td>29</td><td>-</td><td>-</td></tr>
-      <tr class="color-5"><td>30</td><td>-</td><td>-</td></tr>
+      <tr class="color-3"><td>28</td><td>Rifki</td><td>22339865043</td></tr>
+      <tr class="color-4"><td>29</td><td>Nur Difa Ramadhani</td><td>22339865044</td></tr>
+      <tr class="color-5"><td>30</td><td>Herbert Baginisura</td><td>22339865045</td></tr>
+      <tr class="color-1"><td>31</td><td>-</td><td>-</td></tr>
+      <tr class="color-2"><td>32</td><td>-</td><td>-</td></tr>
+      <tr class="color-3"><td>33</td><td>-</td><td>-</td></tr>
+      <tr class="color-4"><td>34</td><td>-</td><td>-</td></tr>
+      <tr class="color-5"><td>35</td><td>-</td><td>-</td></tr>
       </tbody>
     </table>
 
-    <a href="index.html"><button class="cta-button">Kembali ke Beranda</button></a>
+    <a href="dashboard.html"><button class="cta-button">Kembali ke Beranda</button></a>
   </div>
 
   <script>
@@ -262,6 +324,18 @@
     }
     animateStars();
   </script>
+<section>
+<p>&copy; 2025 | Wonder Ultramen Mahasiswa Community | Semua hak cipta dilindungi.
+						</section>
+						<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 600);
+  });
+</script>
 
 </body>
 </html>

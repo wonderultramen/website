@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -8,6 +9,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
+  #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.preloader-content {
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.preloader-logo {
+  width: 100px;
+  height: 100px;
+  animation: rotateGlow 2s linear infinite;
+}
+
+.loading-text {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #00f2ff;
+  text-shadow: 0 0 5px #00f2ff, 0 0 10px #00f2ff, 0 0 15px #00f2ff;
+  font-weight: bold;
+  animation: pulseText 1.5s infinite ease-in-out;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); filter: drop-shadow(0 0 5px #00f2ff); }
+  100% { transform: rotate(360deg); filter: drop-shadow(0 0 20px #00f2ff); }
+}
+
+@keyframes pulseText {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
     * {
       box-sizing: border-box;
     }
@@ -175,6 +225,12 @@
 </style>
 </head>
 <body>
+<div id="preloader">
+  <div class="preloader-content">
+    <img src="assets/images/logo.png" alt="Loading..." class="preloader-logo" />
+    <p class="loading-text">Loading...</p>
+  </div>
+</div>
 
   <!-- Background bintang -->
   <canvas id="starCanvas"></canvas>
@@ -200,7 +256,7 @@
 
       <div class="event-box">
         <img src="assets/images/merbabu.png" alt="Merbabu" class="event-img" />
-        <div class="event-title">MERBABU: AGUSTUS</div>
+        <div class="event-title">MERBABU: 6 - 7 SEPTEMBER 2025</div>
         <div class="event-status">Segera</div>
         <div class="showtimes">
           <div class="showtime">14:00</div>
@@ -212,7 +268,7 @@
 
       <div class="event-box">
         <img src="assets/images/comingsoon.png" alt="Coming Soon" class="event-img" />
-        <div class="event-title">COMING SOON: DESEMBER</div>
+        <div class="event-title">COMING SOON: DESEMBER 2025</div>
         <div class="event-status">Segera</div>
         <div class="showtimes">
           <div class="showtime">14:00</div>
@@ -224,7 +280,7 @@
     </div>
   </div>
 
-  <a href="index.html"><button class="cta-button">Kembali ke Beranda</button></a>
+  <a href="dashboard.html"><button class="cta-button">Kembali ke Beranda</button></a>
 
   <!-- Script animasi bintang -->
   <script>
@@ -267,6 +323,18 @@
 
     animateStars();
   </script>
+<section>
+<p>&copy; 2025 | Wonder Ultramen Mahasiswa Community | Semua hak cipta dilindungi.
+						</section>
+						<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 600);
+  });
+</script>
 
 </body>
 </html>
